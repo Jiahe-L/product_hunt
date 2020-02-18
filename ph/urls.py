@@ -21,7 +21,7 @@ from django.conf import settings#新增
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', products.views.product_list, name='主页'),
+    path('', products.views.product_list, name='主页'),   #product_list应该可以将数据库中的产品传到前端页面上去
     path('account/', include('account.urls')),
     path('products/', include('products.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -15,5 +15,8 @@ class Product(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	def shout_text(self):
+		return self.text[:60] + '...'	#对文本显示一部分
     #model完成之后要去admin注册,在去命令行迁移
     #此处的默认显示在admin管理界面，在网站页面显示需要去改html

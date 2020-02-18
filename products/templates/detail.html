@@ -1,10 +1,8 @@
 {% extends "theme.html" %}
 <!-- 使主页显示product中的各数据-->
 {% block content %}
-
+<!--删掉for循环即可-->
 <div class="container">
-
-{% for product in products.all  %}
 	<div class="row">	<!--使左边图片，右边标题简介，各产品列排列-->
 		<div class="card" style="width: 18rem;">
 		  <img src="{{ product.icon.url }}" class="card-img-top" alt="">
@@ -17,9 +15,6 @@
 			{{ product.intro }}
 		</div>
 	</div>
-{% endfor %}
-
 </div>
 
 {% endblock content %}
-
